@@ -1,0 +1,8 @@
+Com\app\controller\ProduitController.class
+Com\app\metier\Produit.class
+Com\app\controller\TestServlet.class
+Com\app\dao\ProduitDAO.class
+Com\app\dao\UserDAO.class
+Com\app\controller\AuthController.class
+Com\app\metier\AuthService.class
+Com\app\dao\DatabaseConnection.class
