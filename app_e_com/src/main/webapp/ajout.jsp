@@ -5,6 +5,20 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
+    <%
+            if (session.getAttribute("user") == null) {
+                response.sendRedirect("login.jsp");
+                return;
+            }
+        %>
+        <%
+            String user = (String) session.getAttribute("user");
+            if (user != null) {
+        %>
+            <p>Bienvenue, <%= user %> | <a href="logout">Déconnexion</a></p>
+        <%
+            }
+        %>
     <h2>Ajouter un Produit</h2>
 
     <form action="produits?action=add" method="post">
