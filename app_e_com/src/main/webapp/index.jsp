@@ -1,11 +1,15 @@
-<!DOCTYPE html>
 <html>
 <head>
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="css/stylelog.css">
 </head>
 <body>
-
+    <%
+        if (session.getAttribute("user") != null) {
+            response.sendRedirect("produits");
+            return;
+        }
+    %>
 
     <form action="login" method="POST">
         <label for="username">Username:</label>
